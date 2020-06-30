@@ -9,10 +9,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-products: Product[];
-currentCategoryId: number;
-currentCategoryName: string;
-searchMode : boolean;
+products: Product[]=[];
+currentCategoryId: number=1;
+currentCategoryName: string='';
+searchMode : boolean=false;
+
+//new properties for pagination
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {

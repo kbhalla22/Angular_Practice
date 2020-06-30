@@ -16,7 +16,7 @@ ingredientAdded=new EventEmitter<{name:string,amount:number}>();
   ngOnInit(): void {
   }
 onAddItem(){
-  const 
-const newIngredient =new Ingredient(this.nameInputRef.nativeElement.value);
+//   const 
+// const newIngredient =new Ingredient(this.nameInputRef.nativeElement.value);
 }
 }
