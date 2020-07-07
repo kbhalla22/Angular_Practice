@@ -12,7 +12,7 @@ const appRoutes: Routes =[
     {path: '', component: HomeComponent},
     {path: 'users', component: UsersComponent, children:[{path: ':id/:name', component: UserComponent}]}, 
     
-    {path: 'servers', canActivate: [AuthGuard], component: ServersComponent, children:[{path: ':id', component: ServerComponent},
+    {path: 'servers', canActivateChild: [AuthGuard], component: ServersComponent, children:[{path: ':id', component: ServerComponent},
     {path: ':id/edit', component: EditServerComponent}  ]},
     {path: '**', component:PageNotFoundComponent}
       
