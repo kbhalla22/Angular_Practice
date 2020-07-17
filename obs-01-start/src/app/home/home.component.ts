@@ -20,10 +20,14 @@ const customObservable = Observable.create(observer=>{
   let count=0;
   setInterval(()=>{
 observer.next(count);
+if(count>3){
+  observer.error(new Error('count is greater than 3'));
+  
+}
 count++;
   },1000);
 });
-customObservable.sub(data=>{
+customObservable.subscribe(data=>{
   console.log(data);
 });
   }
