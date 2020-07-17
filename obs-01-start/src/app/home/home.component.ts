@@ -27,6 +27,8 @@ if(count>3){
 count++;
   },1000);
 });
+
+
 customObservable.subscribe(data=>{
   console.log(data);
 });
